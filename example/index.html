@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Barcode Reader Example</title>
+    <script src="../jspm_packages/system.js"></script>
+    <script src="../config.js"></script>
+    <script>
+        System.import('index.js');
+
+    </script>
+</head>
+<body ng-app="barcodeReaderExample" ng-controller="MainController">
+<span>{{lastTrigger}}</span>
+<br/>
+<br/>
+<div>
+    <label for="triggerChar">Trigger Character (default 9 which is TAB)</label>
+    <input id="triggerChar" type="number" ng-model="triggerChar" value="9">
+</div>
+<br/>
+<br/>
+<div>
+    <label for="separatorChar">Separator Character (default 13 which is ENTER)</label>
+    <input id="separatorChar" type="number" ng-model="separatorChar" value="13">
+</div>
+
+
+
+<br/>
+<div ng-repeat="word in words">{{word}}</div>
+
+
+<barcode-reader separator-char="separatorChar" trigger-char="triggerChar" scan-callback="scanCallback"
+                trigger-callback="triggerCallback"></barcode-reader>
+</body>
+</html>
