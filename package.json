@@ -1,8 +1,8 @@
 {
-  "name": "barcode-reader-",
+  "name": "angular-barcode-scanner",
   "version": "1.0.1",
   "description": "An angular barcode reader module",
-  "main": "index.html",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
