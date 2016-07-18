@@ -20,13 +20,10 @@ export default class BarcodeReaderDirective {
     }
 
     link(scope, element, attributes) {
-        console.info('Barcode Reader Directive link');
         angular.element(this.window).on('keydown', (e) => {
             let keycode = e.keyCode || e.which;
             let triggerChar = parseInt(scope.triggerChar, 10);
             let separatorChar = parseInt(scope.separatorChar, 10);
-
-            console.info(keycode);
 
             if(keycode === triggerChar) {
                 scope.triggerCallback();
