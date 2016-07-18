@@ -1,6 +1,6 @@
 'use strict';
 
-export default class BarcodeReaderDirective {
+export default class BarcodeScannerDirective {
     constructor($window) {
 
         // Private members
@@ -45,9 +45,9 @@ export default class BarcodeReaderDirective {
     }
 
     static directiveFactory($window){
-        BarcodeReaderDirective.instance = new BarcodeReaderDirective($window);
-        return BarcodeReaderDirective.instance;
+        BarcodeScannerDirective.instance = new BarcodeScannerDirective($window);
+        return BarcodeScannerDirective.instance;
     }
 }
 
-BarcodeReaderDirective.directiveFactory.$inject = ['$window'];
+BarcodeScannerDirective.directiveFactory.$inject = ['$window'];

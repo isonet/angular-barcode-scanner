@@ -2,11 +2,11 @@
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory();
 	else if(typeof define === 'function' && define.amd)
-		define("barcode-reader", [], factory);
+		define("barcode-scanner", [], factory);
 	else if(typeof exports === 'object')
-		exports["barcode-reader"] = factory();
+		exports["barcode-scanner"] = factory();
 	else
-		root["barcode-reader"] = factory();
+		root["barcode-scanner"] = factory();
 })(this, function() {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -60,17 +60,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	
-	var _barcodeReaderDirective = __webpack_require__(1);
+	var _barcodeScannerDirective = __webpack_require__(1);
 	
-	var _barcodeReaderDirective2 = _interopRequireDefault(_barcodeReaderDirective);
+	var _barcodeScannerDirective2 = _interopRequireDefault(_barcodeScannerDirective);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	var barcodeReader = angular.module('barcodeReader', []);
+	var barcodeScanner = angular.module('barcodeScanner', []);
 	
-	barcodeReader.directive('barcodeReader', _barcodeReaderDirective2.default.directiveFactory);
+	barcodeScanner.directive('barcodeScanner', _barcodeScannerDirective2.default.directiveFactory);
 	
-	exports.default = barcodeReader;
+	exports.default = barcodeScanner;
 	module.exports = exports['default'];
 
 /***/ },
@@ -87,9 +87,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 	
-	var BarcodeReaderDirective = function () {
-	    function BarcodeReaderDirective($window) {
-	        _classCallCheck(this, BarcodeReaderDirective);
+	var BarcodeScannerDirective = function () {
+	    function BarcodeScannerDirective($window) {
+	        _classCallCheck(this, BarcodeScannerDirective);
 	
 	        // Private members
 	        this.buffer = '';
@@ -107,7 +107,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        };
 	    }
 	
-	    _createClass(BarcodeReaderDirective, [{
+	    _createClass(BarcodeScannerDirective, [{
 	        key: 'link',
 	        value: function link(scope, element, attributes) {
 	            var _this = this;
@@ -136,22 +136,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }], [{
 	        key: 'directiveFactory',
 	        value: function directiveFactory($window) {
-	            BarcodeReaderDirective.instance = new BarcodeReaderDirective($window);
-	            return BarcodeReaderDirective.instance;
+	            BarcodeScannerDirective.instance = new BarcodeScannerDirective($window);
+	            return BarcodeScannerDirective.instance;
 	        }
 	    }]);
 	
-	    return BarcodeReaderDirective;
+	    return BarcodeScannerDirective;
 	}();
 	
-	exports.default = BarcodeReaderDirective;
+	exports.default = BarcodeScannerDirective;
 	
 	
-	BarcodeReaderDirective.directiveFactory.$inject = ['$window'];
+	BarcodeScannerDirective.directiveFactory.$inject = ['$window'];
 	module.exports = exports['default'];
 
 /***/ }
 /******/ ])
 });
 ;
-//# sourceMappingURL=barcode-reader.js.map
+//# sourceMappingURL=barcode-scanner.js.map

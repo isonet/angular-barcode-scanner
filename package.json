@@ -2,14 +2,14 @@
   "name": "angular-barcode-scanner",
   "version": "1.0.2",
   "description": "An angular barcode reader module",
-  "main": "dist/barcode-reader.min.js",
+  "main": "dist/barcode-scanner.min.js",
   "scripts": {
     "build": "webpack --mode=build",
     "dev": "webpack --progress --colors --watch --mode=dev"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/isonet/barcode-reader.git"
+    "url": "git+https://github.com/isonet/barcode-scanner.git"
   },
   "keywords": [
     "barcode",
@@ -22,9 +22,9 @@
   "author": "Paul Biester",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/isonet/barcode-reader/issues"
+    "url": "https://github.com/isonet/barcode-scanner/issues"
   },
-  "homepage": "https://github.com/isonet/barcode-reader#readme",
+  "homepage": "https://github.com/isonet/barcode-scanner#readme",
   "dependencies": {},
   "devDependencies": {
 	"angular": "^1.5.7",

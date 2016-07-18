@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Barcode Reader Example</title>
+    <title>Barcode Scanner Example</title>
 	<script src="../node_modules/angular/angular.js"></script>
-    <script src="../dist/barcode-reader.js"></script>
+    <script src="../dist/barcode-scanner.js"></script>
 	<script>
 		'use strict';
-		var example = angular.module('barcodeReaderExample', ['barcodeReader']);
+		var example = angular.module('barcodeScannerExample', ['barcodeScanner']);
 		example.controller('MainController', function ($scope) {
 			$scope.words = [];
 			$scope.triggerChar = 9;
@@ -23,7 +23,7 @@
 		});
 	</script>
 </head>
-<body ng-app="barcodeReaderExample" ng-controller="MainController">
+<body ng-app="barcodeScannerExample" ng-controller="MainController">
 <span>{{lastTrigger}}</span>
 <br/>
 <br/>
@@ -44,7 +44,7 @@
 <div ng-repeat="word in words">{{word}}</div>
 
 
-<barcode-reader separator-char="separatorChar" trigger-char="triggerChar" scan-callback="scanCallback"
-                trigger-callback="triggerCallback"></barcode-reader>
+<barcode-scanner separator-char="separatorChar" trigger-char="triggerChar" scan-callback="scanCallback"
+                trigger-callback="triggerCallback"></barcode-scanner>
 </body>
 </html>
