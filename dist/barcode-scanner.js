@@ -121,7 +121,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    scope.triggerCallback();
 	                    e.preventDefault();
 	                } else {
-	                    var valid = keycode >= 32 && keycode <= 127;
+	                    var valid = keycode >= 32 && keycode <= 255;
 	                    if (valid === true && keycode !== separatorChar) {
 	                        _this.buffer += e.key;
 	                    } else if (keycode === separatorChar) {

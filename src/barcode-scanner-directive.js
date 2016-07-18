@@ -29,7 +29,7 @@ export default class BarcodeScannerDirective {
                 scope.triggerCallback();
                 e.preventDefault();
             } else {
-                let valid = keycode >= 32 && keycode <= 127;
+                let valid = keycode >= 32 && keycode <= 255;
                 if (valid === true && keycode !== separatorChar) {
                     this.buffer += e.key;
                 } else if (keycode === separatorChar) {
