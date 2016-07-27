@@ -2,10 +2,11 @@
   "name": "angular-barcode-scanner",
   "version": "1.0.4",
   "description": "An angular barcode reader module",
-  "main": "dist/barcode-scanner.min.js",
+  "main": "dist/barcode-scanner.es5.js",
   "scripts": {
-    "build": "webpack --mode=build",
-    "dev": "webpack --progress --colors --watch --mode=dev"
+    "build-es6": "browserify src/barcode-scanner.js --standalone barcode -o dist/barcode-scaner.es6.js",
+    "build-es5": "browserify src/barcode-scanner.js -o dist/barcode-scanner.es5.js -t [ babelify --presets [ es2015 ] ]",
+    "build": "npm run build-es5 && npm run build-es6"
   },
   "repository": {
     "type": "git",
@@ -28,15 +29,8 @@
   "dependencies": {},
   "devDependencies": {
 	"angular": "^1.5.7",
-    "babel-core": "^6.10.4",
-    "babel-eslint": "^6.1.2",
-    "babel-istanbul": "^0.11.0",
-    "babel-istanbul-loader": "^0.1.0",
-    "babel-loader": "^6.2.4",
-    "babel-plugin-add-module-exports": "^0.2.1",
     "babel-preset-es2015": "^6.9.0",
-    "loader-utils": "^0.2.15",
-    "rimraf": "^2.5.3",
-    "webpack": "^1.13.1"
+    "babelify": "^7.3.0",
+    "browserify": "^13.0.1"
   }
 }
