@@ -4,10 +4,10 @@ class BarcodeScannerDirective {
     constructor($window) {
 
         // Private members
-        this.buffer = '';
+        BarcodeScannerDirective.buffer = '';
 
         // Injections
-        this.window = $window;
+        BarcodeScannerDirective.window = $window;
 
         // Directive config
         this.restrict = 'AE';
@@ -20,7 +20,7 @@ class BarcodeScannerDirective {
     }
 
     link(scope, element, attributes) {
-        angular.element(this.window).on('keydown', (e) => {
+        angular.element(BarcodeScannerDirective.window).on('keydown', (e) => {
             let keycode = e.keyCode || e.which;
             let triggerChar = parseInt(scope.triggerChar, 10);
             let separatorChar = parseInt(scope.separatorChar, 10);
@@ -31,12 +31,12 @@ class BarcodeScannerDirective {
             } else {
                 let valid = keycode >= 32 && keycode <= 255;
                 if (valid === true && keycode !== separatorChar) {
-                    this.buffer += e.key;
+                    BarcodeScannerDirective.buffer += e.key;
                 } else if (keycode === separatorChar) {
                     if (this.buffer.length > 0) {
-                        scope.scanCallback(this.buffer);
+                        scope.scanCallback(BarcodeScannerDirective.buffer);
                     }
-                    this.buffer = '';
+                    BarcodeScannerDirective.buffer = '';
                 }
             }
 

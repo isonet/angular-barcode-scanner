@@ -13,7 +13,7 @@ var BarcodeScannerDirective = function () {
         this.buffer = '';
 
         // Injections
-        this.window = $window;
+        BarcodeScannerDirective.window = $window;
 
         // Directive config
         this.restrict = 'AE';
@@ -30,7 +30,7 @@ var BarcodeScannerDirective = function () {
         value: function link(scope, element, attributes) {
             var _this = this;
 
-            angular.element(this.window).on('keydown', function (e) {
+            angular.element(BarcodeScannerDirective.window).on('keydown', function (e) {
                 var keycode = e.keyCode || e.which;
                 var triggerChar = parseInt(scope.triggerChar, 10);
                 var separatorChar = parseInt(scope.separatorChar, 10);
