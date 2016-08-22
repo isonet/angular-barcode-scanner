@@ -10,7 +10,7 @@ var BarcodeScannerDirective = function () {
         _classCallCheck(this, BarcodeScannerDirective);
 
         // Private members
-        this.buffer = '';
+        BarcodeScannerDirective.buffer = '';
 
         // Injections
         BarcodeScannerDirective.window = $window;
@@ -41,12 +41,12 @@ var BarcodeScannerDirective = function () {
                 } else {
                     var valid = keycode >= 32 && keycode <= 255;
                     if (valid === true && keycode !== separatorChar) {
-                        _this.buffer += e.key;
+                        BarcodeScannerDirective.buffer += String.fromCharCode(keycode);
                     } else if (keycode === separatorChar) {
                         if (_this.buffer.length > 0) {
-                            scope.scanCallback(_this.buffer);
+                            scope.scanCallback(BarcodeScannerDirective.buffer);
                         }
-                        _this.buffer = '';
+                        BarcodeScannerDirective.buffer = '';
                     }
                 }
             });

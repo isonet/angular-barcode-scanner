@@ -31,7 +31,7 @@ class BarcodeScannerDirective {
             } else {
                 let valid = keycode >= 32 && keycode <= 255;
                 if (valid === true && keycode !== separatorChar) {
-                    BarcodeScannerDirective.buffer += e.key;
+                    BarcodeScannerDirective.buffer += String.fromCharCode(keycode);
                 } else if (keycode === separatorChar) {
                     if (this.buffer.length > 0) {
                         scope.scanCallback(BarcodeScannerDirective.buffer);
