@@ -1,6 +1,6 @@
 {
   "name": "angular-barcode-scanner",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "An angular barcode reader module",
   "main": "dist/angular-barcode-scanner.js",
   "scripts": {
