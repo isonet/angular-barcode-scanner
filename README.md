@@ -25,7 +25,7 @@ import 'angular-barcode-scanner';
 #### Add it as a module to angular
 
 ```javascript
-angular.module('MyExampleApp', ['barcodeScanner]);
+angular.module('MyExampleApp', ['barcodeScanner']);
 ```
 
 ## Usage
