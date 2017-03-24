@@ -30,7 +30,7 @@ angular.module('MyExampleApp', ['barcodeScanner']);
 
 ## Usage
 
--Take a look at the example/index.html file.
+- Take a look at the example/index.html file.
 
 # Dev / Other
 
