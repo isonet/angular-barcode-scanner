@@ -1,4 +1,4 @@
-# angular-barcode-scanner [![npm](https://img.shields.io/npm/v/angular-barcode-scanner.svg?style=flat-square)](https://github.com/isonet/angular-barcode-scanner)[![licence](https://img.shields.io/npm/l/angular-barcode-scanner.svg?style=flat-square)](https://img.shields.io/npm/l/angular-barcode-scanner.svg)
+# angular-barcode-scanner [![npm](https://img.shields.io/npm/v/angular-barcode-scanner.svg?style=flat-square)](https://github.com/isonet/angular-barcode-scanner)[![licence](https://img.shields.io/npm/l/angular-barcode-scanner.svg?style=flat-square)](https://img.shields.io/npm/l/angular-barcode-scanner.svg)[![Codacy grade](https://img.shields.io/codacy/grade/4fba3406604a41eb942004c5bb99527a.svg?style=flat-square)](https://github.com/isonet/angular-barcode-scanner)
 
 [NPM registry](https://www.npmjs.com/package/angular-barcode-scanner)
 
