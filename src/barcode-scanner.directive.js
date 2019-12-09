@@ -9,9 +9,9 @@ export default ($window) => {
             scanCallback: '=',
             triggerCallback: '='
         },
-        link: (scope) => {
+        link: (scope, element) => {
             let buffer = '';
-            angular.element($window).on('keydown', (e) => {
+            const handler = (e) => {
                 const keycode = e.keyCode || e.which;
                 const triggerChar = parseInt(scope.triggerChar, 10);
                 const separatorChar = parseInt(scope.separatorChar, 10);
@@ -30,6 +30,10 @@ export default ($window) => {
                         buffer = '';
                     }
                 }
+            };
+            angular.element($window).on('keydown', handler);
+            element.on('$destroy', () => {
+                angular.element($window).off('keydown', handler);
             });
         }
     }
