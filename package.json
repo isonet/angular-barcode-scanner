@@ -5,7 +5,9 @@
   "main": "dist/angular-barcode-scanner.js",
   "scripts": {
     "build": "webpack -p --config webpack.config.babel.js",
-    "lint": "eslint -c .eslintrc.json --ext .js app/"
+    "lint": "eslint -c .eslintrc.json --ext .js app/",
+    "build-win": ".\\node_modules\\.bin\\webpack.cmd -p --config webpack.config.babel.js",
+    "lint-win": ".\\node_modules\\.bin\\eslint.cmd -c .eslintrc.json --ext .js app/"
   },
   "repository": {
     "type": "git",
